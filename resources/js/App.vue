@@ -7,7 +7,9 @@
 
 <script>
     import Navbar from "./components/Navbar";
+/*
     import './Styles/app.scss'
+*/
 
     export default {
         name: 'app',
