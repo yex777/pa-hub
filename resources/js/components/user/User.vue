@@ -8,6 +8,8 @@
                     <div class="card-body">
                         I'm an user component.
                     </div>
+
+                    <router-view></router-view>
                 </div>
             </div>
         </div>
