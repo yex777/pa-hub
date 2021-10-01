@@ -7,8 +7,8 @@
         <label for="menu-icon"></label>
         <nav class="nav">
             <ul class="pt-5">
-                <li @click="menuCheckBox === 0"><router-link :to="{ name: 'home'}">Home</router-link></li>
-                <li><router-link :to="{ name: 'user'}">User</router-link></li>
+                <li @click="menuCheckBox = 0"><router-link :to="{ name: 'home'}">Home</router-link></li>
+                <li><router-link :to="{ name: 'user'}" @click="menuCheckBox = 0">User</router-link></li>
                 <li><router-link :to="{ name: 'userSongs'}">My songs</router-link></li>
             </ul>
 

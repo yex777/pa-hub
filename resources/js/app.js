@@ -9,13 +9,13 @@ require('./bootstrap');
 
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
-Vue.use(VueRouter);
-
+import { store } from './store/index';
 import App from "./App.vue";
 import { routes } from './routes.js';
+
+Vue.use(VueRouter);
+
+
 
 /*
 window.Vue = require('vue').default;
@@ -36,6 +36,8 @@ const router = new VueRouter({
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
+Vue.component('app', require('./app').default);
+
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
@@ -47,5 +49,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
     router,
+    store,
     components: { App },
 });

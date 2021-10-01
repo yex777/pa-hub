@@ -13,8 +13,16 @@
 
     export default {
         name: 'app',
+        data() {
+            return {
+                test : 'a',
+            }
+        },
         components: {
           Navbar,
+        },
+        mounted() {
+            console.log("App component mounted");
         },
     }
 </script>
