@@ -12,9 +12,18 @@ import VueRouter from "vue-router";
 import { store } from './store/index';
 import App from "./App.vue";
 import { routes } from './routes.js';
+import VueI18n from 'vue-i18n';
+import languageBundle from '@kirschbaum-development/laravel-translations-loader/php!@kirschbaum-development/laravel-translations-loader';
+
 
 Vue.use(VueRouter);
+Vue.use(VueI18n);
 
+const i18n = new VueI18n({
+    locale: window.navigator.language,
+    messages: languageBundle,
+    silentTranslationWarn: true
+})
 
 
 /*
@@ -50,5 +59,6 @@ const app = new Vue({
     el: '#app',
     router,
     store,
+    i18n,
     components: { App },
 });
